@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>02</title>
+		<!-- Link to remixicon -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<!-- Link to your stylesheet -->
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<input class="input" id="key" type="password" required />
+			<label for="key" class="label">Enter Your Key</label>
+			<span class="icon-wrapper">
+				<i class="icon ri-eye-off-line"></i>
+			</span>
+		</div> 
+		<script>
+			const inputIcon = document.querySelector('.icon')
+			const inputPassword = document.querySelector('.input')
+
+			inputIcon.addEventListener('click', () => {
+				inputIcon.classList.toggle('ri-eye-off-line')
+				inputIcon.classList.toggle('ri-eye-line')
+				inputPassword.type =
+					inputPassword.type === 'password' ? 'text' : 'password'
+			})
+		</script>
+	</body>
+</html>
